@@ -1,0 +1,2 @@
+meteor npm install --save angular angular-meteor
+npm install
