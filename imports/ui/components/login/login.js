@@ -8,21 +8,22 @@ class loginCtrl{
 	constructor($scope){
 		'ngInject';
 		$scope.viewModel(this);
+		this.errors = "";
 	}
 
-	login(username,password,$state,$location){
-		console.log("Minh Phu");
+	loginUser(username,password){
+		var m = this;
 		Meteor.loginWithPassword(username,password,function(error){
 			if(error){
-				console.log(error.reason);
+				m.errors = error.reason;
 			} else {
-				console.log(Meteor.userId());
+				
 			}
 		});
 	}
 }
 
-var module = angular.module('loginModule',[angularMeteor]);
+var module = angular.module('loginModule',[angularMeteor,uiRouter]);
 
 const component = module.component('login',{
 	templateUrl: template,
