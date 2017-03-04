@@ -15,4 +15,5 @@ const component = module.component('mainComponent',{
 	controller:mainCtrl
 });
 
+
 export default component;
