@@ -30,14 +30,8 @@ function run ($rootScope, $state) {
   });
 
   Accounts.onLogin(function () {
-    if ($state.is('login')) {
+    if ($state.is('login') || $state.is('register')) {
       $state.go('home');
     }
-  });
-
-  Accounts.onRegister(function () {
-    if ($state.is('register')) {
-      $state.go('home');
-    }
-  });   
+  });  
 }

@@ -9,11 +9,11 @@
       <span class="white-text email">phuapple.uet@gmail.com</span>
     </div></li>
     <li><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a></li>
-    <div ng-if="Meteor.isUser()">
+    <div ng-if="$ctrl.logined">
       <li><a href="#!"><i class="material-icons">library_books</i>My book</a></li>
       <li><a href="#!"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>My Favorite</a></li>      
     </div>
-    <div ng-if="!Meteor.isUser()">
+    <div ng-if="!$ctrl.logined">
       <li><a href="/login"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Login</a></li>
       <li><a href="/register"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Sign Up</a></li>      
     </div>
