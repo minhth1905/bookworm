@@ -1,5 +1,3 @@
-/* CSS declarations go here */
-
 .container {
   width: 96% !important;
 }
@@ -9,10 +7,12 @@
   white-space: nowrap;
 }
 
-.row-fluid .col.s5 {
+.item-card {
   display: inline-block;
   position: relative;
   margin-right: 0.5rem;
+  width: 144px;
+  height: 168px;
 }
 
 .category {
@@ -21,43 +21,70 @@
   margin-bottom: 0;
 }
 
+.book-title-bg {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  margin-top: 132px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 13, 0.01)), to(rgba(0, 0, 13, 0.7)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+}
+
+.book-title-bg:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+}
+
 .book-title {
   position: absolute;
-  height: 100%;
   width: 100%;
-  width: 10px;
+  height: 100%;
   text-align: left;
 }
 
 .book-title:before {
   content: '';
   display: inline-block;
-  height: 162px;
+  height: 100%;
   vertical-align: bottom;
+  margin-bottom: -12px;
   margin-left: 8px;
 }
 
 .more-btn {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .more-btn:before {
   content: '';
   display: inline-block;
-  margin-left: 122px;
-  margin-top: 166px;
-  vertical-align: text-bottom;
+  height: 100%;
+  vertical-align: bottom;
+  margin-left: 124px;
+  margin-bottom: -4px;
 }
 
-.book-title-bg {
-  display: inline-block;
+.item-link {
   position: absolute;
-  height: 36px;
   width: 100%;
-  text-align: left;
-  margin-top: 132px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 13, 0.01)), to(rgba(0, 0, 13, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+  height: 132px;
+}
+
+.item-link:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+}
+
+.book-cover {
+  display: block;
+  object-fit: cover;
+  width: 144px;
+  height: 168px;
 }
