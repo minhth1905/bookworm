@@ -1,1 +1,63 @@
 /* CSS declarations go here */
+
+.container {
+  width: 96% !important;
+}
+
+.row-fluid {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.row-fluid .col.s5 {
+  display: inline-block;
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.category {
+  font-size: 16pt;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.book-title {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  width: 10px;
+  text-align: left;
+}
+
+.book-title:before {
+  content: '';
+  display: inline-block;
+  height: 162px;
+  vertical-align: bottom;
+  margin-left: 8px;
+}
+
+.more-btn {
+  position: absolute;
+}
+
+.more-btn:before {
+  content: '';
+  display: inline-block;
+  margin-left: 122px;
+  margin-top: 166px;
+  vertical-align: text-bottom;
+}
+
+.book-title-bg {
+  display: inline-block;
+  position: absolute;
+  height: 36px;
+  width: 100%;
+  text-align: left;
+  margin-top: 132px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 13, 0.01)), to(rgba(0, 0, 13, 0.7)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+}
