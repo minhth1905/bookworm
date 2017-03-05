@@ -3,8 +3,26 @@ import angularMeteor from 'angular-meteor';
 import template from './register.html';
 
 class registerCtrl{
-	constructor(){
+	constructor($scope){
+		$scope.viewModel(this);
+	}
 
+	registerUser(username,password){
+		var tmp = this;
+		Accounts.createUser({
+			username: username,
+			password: password,
+			profile: {
+				name: username
+			}
+		}, function (err) {
+			if(err){
+				console.log(err.reason);
+				tmp.error = err.reason;
+			} else {
+				
+			}
+		});
 	}
 }
 
@@ -14,5 +32,15 @@ const component = module.component('register',{
 	templateUrl: template,
 	controller:registerCtrl
 });
+
+module.config(config);
+function config($stateProvider) {
+  'ngInject';
+  $stateProvider.state('register', {
+    url: '/register',
+    template: '<register></register>',
+  });
+
+}
 
 export default component;
