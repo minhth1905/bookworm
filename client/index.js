@@ -20,6 +20,10 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
   $qProvider.errorOnUnhandledRejections(false);
+  $stateProvider.state('home', {
+    url: '/',
+    template: '<main-component></main-component>',
+  });
 }
 
 function run ($rootScope, $state) {
@@ -34,4 +38,31 @@ function run ($rootScope, $state) {
       $state.go('home');
     }
   });  
+}
+
+function onReady() {
+  // angular.bootstrap(document, ['bookworm-app']);
+  $(document).ready(function() {
+    $('.button-collapse').sideNav({
+        menuWidth: 200, // Default is 300
+        // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+      });
+  });   
+}
+
+  $(document).ready(function() {
+    $('.button-collapse').sideNav({
+        menuWidth: 200, // Default is 300
+        // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+      });
+  });
+
+if (Meteor.isCordova) {
+  angular.element(document).on('deviceready', onReady);
+} else {
+  angular.element(document).ready(onReady);
 }

@@ -5,7 +5,7 @@ import template from './main.html';
 import navbar from '../imports/ui/components/navbar/navbar.js';
 class mainCtrl{
 	constructor(){
-		console.log(template);
+		
 	}
 }
 

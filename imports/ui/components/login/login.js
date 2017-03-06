@@ -37,11 +37,6 @@ function config($stateProvider) {
     template: '<login></login>',
   });
 
-  $stateProvider.state('home', {
-    url: '/',
-    template: '<main-component></main-component>',
-  });
-
 }
 
 export default component;
