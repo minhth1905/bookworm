@@ -1,0 +1,13 @@
+<div class="container">
+  <div ng-repeat="category in $ctrl.categories track by $index">
+    <div class="category amber-text">{{category.category}}</div>
+      <div class="row-fluid">
+        <div class="col s5" ng-repeat="book in category.data_book track by $index">
+          <span class="book-title-bg"></span>
+          <span class="book-title white-text">{{book.name}}</span>
+          <span class="more-btn"><a href=""><i class="material-icons white-text">more_vert</i></a></span>
+          <img src="http://placehold.it/144x168?text=book+cover" alt="book-title" class="z-depth-2" style="display: block; max-width: 100%; height: auto;">
+        </div>
+  </div>
+</div>
+  </div>
