@@ -3,8 +3,16 @@ import angularMeteor from 'angular-meteor';
 import template from './sidebar.html';
 
 class sidebarCtrl{
-	constructor(){
-
+	constructor($scope){
+		'ngInject';
+		$scope.viewModel(this);
+		this.logined = false;
+		this.helpers({
+			logined(){
+				if(Meteor.userId()) return true;
+				return false;
+			}
+		});
 	}
 }
 

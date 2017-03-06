@@ -14,30 +14,55 @@ var module = angular.module('bookworm-app',[angularMeteor,uiRouter,sidebar.name,
 	]);
 
 module.config(config);
-
+module.run(run);
 function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider) {
   'ngInject';
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
   $qProvider.errorOnUnhandledRejections(false);
+  $stateProvider.state('home', {
+    url: '/',
+    template: '<main-component></main-component>',
+  });
 }
 
 function run ($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
-    // We can catch the error thrown when the $requireUser promise is rejected
-    // and redirect the user back to the main page
     if (error === 'AUTH_REQUIRED') {
       $state.go('login');
     }
   });
 
   Accounts.onLogin(function () {
-    if ($state.is('login')) {
+    if ($state.is('login') || $state.is('register')) {
       $state.go('home');
     }
+  });  
+}
+
+function onReady() {
+  // angular.bootstrap(document, ['bookworm-app']);
+  $(document).ready(function() {
+    $('.button-collapse').sideNav({
+        menuWidth: 200, // Default is 300
+        // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+      });
+  });   
+}
+
+  $(document).ready(function() {
+    $('.button-collapse').sideNav({
+        menuWidth: 200, // Default is 300
+        // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+      });
   });
 
-  Accounts.onLoginFailure(function () {
-    $state.go('login');
-  });
+if (Meteor.isCordova) {
+  angular.element(document).on('deviceready', onReady);
+} else {
+  angular.element(document).ready(onReady);
 }
