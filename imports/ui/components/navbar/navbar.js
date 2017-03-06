@@ -5,7 +5,7 @@ import template from './navbar.html';
 
 class navbarCtrl{
 	constructor(){
-		console.log(template);
+		
 	}
 }
 
