@@ -18,10 +18,10 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
   $qProvider.errorOnUnhandledRejections(false);
-//   $stateProvider.state('home', {
-//     url: '/',
-//     template: '<main-component></main-component>',
-//   });
+  $stateProvider.state('home', {
+    url: '/',
+    template: 'main.html>',
+  });
 }
 
 function run ($rootScope, $state) {
