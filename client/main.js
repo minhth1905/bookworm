@@ -20,7 +20,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
   $qProvider.errorOnUnhandledRejections(false);
   $stateProvider.state('home', {
     url: '/',
-    template: 'main.html>',
+    template: 'main.html',
   });
 }
 
