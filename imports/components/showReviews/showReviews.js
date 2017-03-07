@@ -2,7 +2,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 import template from './showReviews.html';
-import navbar from '../../ui/components/navbar/navbar.js';
+import navbar from '../navbar/navbar.js';
 
 class ShowReviewsCtrl {
   constructor($stateParams, $scope) {
