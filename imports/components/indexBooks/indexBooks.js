@@ -2,7 +2,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Categories } from '../../api/categories.js';
 import { Books } from '../../api/books.js';
-
+import showReviews  from '../showReviews/showReviews';
 import template from './indexBooks.html';
 
 class IndexBooksCtrl {
@@ -23,6 +23,11 @@ class IndexBooksCtrl {
               "name": obj.name,
               "id": obj._id
             };
+              return {
+                  "name": obj.name,
+                  "id": obj._id,
+                  "cover": obj.cover
+              };
           })
 
           data_category.data_book = booksList;
@@ -36,7 +41,7 @@ class IndexBooksCtrl {
 }
 
 export default angular.module('indexBooks', [
-  angularMeteor
+  angularMeteor, showReviews.name
 ])
   .component('indexBooks', {
     templateUrl: template,

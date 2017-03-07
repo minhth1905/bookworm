@@ -1,0 +1,1 @@
+sudo meteor mongo --allow-superuser < docs/import_database.js
