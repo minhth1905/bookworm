@@ -1,7 +1,7 @@
 <div class="container">
   <div ng-repeat="category in $ctrl.categories track by $index">
     <!--Category name-->
-    <div>
+    <div  ui-sref="showallBooks({ categoryId: category.id })">
       <div class="category-name amber-text">{{category.category}}</div>
       <a class="amber-text caregory-more-btn"><i class="material-icons">expand_more</i></a>
     </div>
@@ -14,7 +14,7 @@
         <span class="more-btn"><a href=""><i class="material-icons white-text">more_vert</i></a></span>
         <img ng-src="{{book.cover}}" alt="book-title" class="z-depth-1 book-cover">
       </div>
-      <div class="col s5 item-card" ui-sref="showallBooks({ categoryId: category.id })>
+      <div class="col s5 item-card" ui-sref="showallBooks({ categoryId: category.id })">
         <img src="images/more-card.jpg" class="z-depth-1 book-cover"></img>
       </div>
       <!--End Books-->
