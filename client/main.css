@@ -1,10 +1,19 @@
+navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  max-height: 56px;
+  width: 100%
+}
+
 .container {
   width: 96% !important;
+  margin-top: 56px !important;
 }
 
 .category-name {
   font-size: 16pt;
-  margin-bottom: 0;
+  margin-top: 10px;
   display: inline-block;
   width: 90%;
 }
@@ -13,6 +22,11 @@
   display: inline-block;
   width: 10%;
   margin-top: 2px !important;
+}
+
+.category-more-btn:before {
+  content: '';
+
 }
 
 .row-fluid {
@@ -24,32 +38,27 @@
 .item-card {
   display: inline-block;
   position: relative;
+  background-color: rgb(63,81,181);
   margin-right: 0.5rem;
-  width: 144px;
-  height: 168px;
+  width: 40%;
+  height: 210px;
+  padding: 0 !important;
 }
 
-.book-title-bg {
+/*.book-title-bg {
   position: absolute;
   width: 100%;
-  height: 36px;
-  margin-top: 132px;
+  height: 100%;
+  background-color: rgb(63,81,181);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 13, 0.01)), to(rgba(0, 0, 13, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
+  background-image: -webkit-linear-gradient(top, rgba(63,81,181,0.01), rgba(63,81,181,0.7));
   background-image: -moz-linear-gradient(top, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
   background-image: linear-gradient(to bottom, rgba(0, 0, 13, 0.01), rgba(0, 0, 13, 0.7));
-}
-
-.book-title-bg:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: bottom;
-}
+}*/
 
 .book-title {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 24px);
   height: 100%;
   text-align: left;
 }
@@ -59,45 +68,30 @@
   display: inline-block;
   height: 100%;
   vertical-align: bottom;
-  margin-bottom: -12px;
-  margin-left: 8px;
+  margin-bottom: -5px;
+  margin-left: 4%;
 }
 
-.more-btn {
+.item-more-btn {
   position: absolute;
   width: 100%;
   height: 100%;
+  font-size: small;
 }
 
-.more-btn:before {
+.item-more-btn:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: bottom;
-  margin-left: 124px;
-  margin-bottom: -4px;
-}
-
-.item-link {
-  position: absolute;
-  width: 100%;
-  height: 132px;
-}
-
-.item-link:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
+  margin-left: calc(100% - 24px);
 }
 
 .book-cover {
   display: block;
   object-fit: cover;
-  width: 144px;
-  height: 168px;
-}
-
-.category-more-card {
-  /*font-size: 36px !important;*/
-  /*text-align: center;*/
+  width: 98%;
+  height: calc(100% - 36px);
+  margin-top: 1%;
+  margin-left: 1%;
 }

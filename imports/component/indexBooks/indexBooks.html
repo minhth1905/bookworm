@@ -1,21 +1,27 @@
 <div class="container">
   <div ng-repeat="category in $ctrl.categories track by $index">
     <!--Category name-->
-    <div  ui-sref="showallBooks({ categoryId: category.id })">
+    <a ui-sref="showallBooks({ categoryId: category.id })">
       <div class="category-name amber-text">{{category.category}}</div>
-      <a class="amber-text caregory-more-btn"><i class="material-icons">expand_more</i></a>
-    </div>
+      <span class="amber-text caregory-more-btn"><i class="material-icons">expand_more</i></span>
+    </a>
     <!--End Category name-->
     <!--Books-->
     <div class="row-fluid">
-      <div class="col s5 item-card" ng-repeat="book in category.data_book track by $index" ui-sref="showReviews({ bookId: book.id })">
-        <span class="book-title-bg"></span>
-        <span class="book-title white-text">{{book.name}}</span>
-        <span class="more-btn"><a href=""><i class="material-icons white-text">more_vert</i></a></span>
-        <img ng-src="{{book.cover}}" alt="book-title" class="z-depth-1 book-cover">
+      <div class="col s5 item-card z-depth-1">
+        <span class="book-title amber-text">1</span>
+        <span class="item-more-btn"><a href=""><i class="material-icons amber-text">more_vert</i></a></span>
+        <img ng-src="http://placehold.it/300x200" alt="book-title" class="z-depth-1 book-cover">
+        <div class="book-title-bg"></div>
       </div>
-      <div class="col s5 item-card" ui-sref="showallBooks({ categoryId: category.id })">
-        <img src="images/more-card.jpg" class="z-depth-1 book-cover"></img>
+      <div class="col s5 item-card z-depth-1" ng-repeat="book in category.data_book track by $index" ui-sref="showReviews({ bookId: book.id })">
+        <span class="book-title amber-text">{{book.name}}</span>
+        <span class="item-more-btn"><a href=""><i class="material-icons amber-text">more_vert</i></a></span>
+        <img ng-src="{{book.cover}}" alt="book-title" class="book-cover">
+        <span class="book-title-bg"></span>
+      </div>
+      <div class="col s5 item-card z-depth-1" ui-sref="showallBooks({ categoryId: category.id })">
+        <img src="images/more-card.jpg" class="book-cover" style="height: 100%"></img>
       </div>
       <!--End Books-->
     </div>
