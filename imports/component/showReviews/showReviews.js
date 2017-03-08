@@ -1,6 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import { Reviews } from '../../api/reviews.js';
+import { Books } from '../../api/books.js';
 import template from './showReviews.html';
 import navbar from '../../ui/components/navbar/navbar.js';
 
@@ -11,8 +13,18 @@ class ShowReviewsCtrl {
     this.bookId = $stateParams.bookId;
     $scope.viewModel(this);
     this.helpers({
-      bookId() {
-        return $stateParams.bookId;
+      all_review() {
+        var book_id = $stateParams.bookId;
+        console.log(book_id);
+        var all_reviews = Reviews.find({ "book_id": book_id });
+        if(all_reviews.count() == 0)
+          return 0;  
+        return all_reviews; 
+      },
+      book_cover() {
+        var book_id = $stateParams.bookId;
+        var cover_obj = Books.findOne({ "_id": book_id });
+        return cover_obj;
       }
     })
   }

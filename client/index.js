@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import { Meteor } from 'meteor/meteor'
 
 import sidebar from '../imports/ui/components/sidebar/sidebar.js';
 import navbar from '../imports/ui/components/navbar/navbar.js';
