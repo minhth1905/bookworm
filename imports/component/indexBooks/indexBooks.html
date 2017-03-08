@@ -8,12 +8,6 @@
     <!--End Category name-->
     <!--Books-->
     <div class="row-fluid">
-      <div class="col s5 item-card z-depth-1">
-        <span class="book-title amber-text">1</span>
-        <span class="item-more-btn"><a href=""><i class="material-icons amber-text">more_vert</i></a></span>
-        <img ng-src="http://placehold.it/300x200" alt="book-title" class="z-depth-1 book-cover">
-        <div class="item-link"></div>
-      </div>
       <div class="col s5 item-card z-depth-1" ng-repeat="book in category.data_book track by $index">
         <span class="book-title amber-text">{{book.name}}</span>
         <span class="item-more-btn"><a href=""><i class="material-icons amber-text">more_vert</i></a></span>
