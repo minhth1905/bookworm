@@ -20,10 +20,6 @@ class IndexBooksCtrl {
             "category_id": element._id
           }).map(function (obj) {
             return {
-              "name": obj.name,
-              "id": obj._id
-            };
-              return {
                   "name": obj.name,
                   "id": obj._id,
                   "cover": obj.cover
