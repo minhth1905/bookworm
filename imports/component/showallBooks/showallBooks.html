@@ -1,10 +1,9 @@
 <navbar></navbar>
-<p>{{$ctrl.categoryName.name}}</p>
-<div class="row">
-  <div class="col-md-5" ng-repeat="book in $ctrl.categoryId" ui-sref="showReviews({ bookId: book._id })">
-    <span class="book-title-bg"></span>
-    <span class="book-title white-text">{{book.name}}</span>
-    <span class="more-btn"><a href=""><i class="material-icons white-text">more_vert</i></a></span>
-    <img ng-src="{{book.cover}}" alt="book-title" class="z-depth-2 cover-book" style="display: block; max-width: 100%;">
+<div class="container">
+  <div class="category-name amber-text">{{$ctrl.categoryName.name}}</div>
+  <div class="item-card" ng-repeat="book in $ctrl.categoryId" ui-sref="showReviews({ bookId: book._id })" style="width: 30% !important; margin-top: 5px;">
+    <span class="book-title amber-text truncate">{{book.name}}</span>
+    <span class="item-more-btn"><a href=""><i class="material-icons amber-text">more_vert</i></a></span>
+    <img ng-src="{{book.cover}}" alt="book-title" class="z-depth-1 book-cover">
   </div>
 </div>
