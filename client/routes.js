@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import { Meteor } from 'meteor/meteor';
 
 import sidebar from '../imports/ui/components/sidebar/sidebar.js';
 import navbar from '../imports/ui/components/navbar/navbar.js';
@@ -53,7 +54,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
     })
     .state('adminCategory',{
       url : "/admin/categories",
-      template : '<navbar></navbar><admin-categories></admin-categories>'
+      template : '<admin-categories></admin-categories>'
     })
     .state('adminEditCategories',{
       url:'/admin/categories/edit/:categoryId',
@@ -65,7 +66,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
     })
     .state('upload',{
       url : "/upload",
-      template : '<navbar></navbar><upload></upload>',
+      template : '<upload></upload>',
       onEnter : function() {
         $.getScript('//cdnjs.cloudflare.com/ajax/libs/summernote/0.5.1/summernote.min.js',function(){
           $('#summernote').summernote();
