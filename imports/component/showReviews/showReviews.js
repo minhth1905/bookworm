@@ -3,6 +3,7 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 import { Reviews } from '../../api/reviews.js';
 import { Books } from '../../api/books.js';
+import showoneReviews from '../showoneReviews/showoneReviews'
 import template from './showReviews.html';
 import navbar from '../../ui/components/navbar/navbar.js';
 
@@ -31,7 +32,7 @@ class ShowReviewsCtrl {
 }
 const name = 'showReviews';
 export default angular.module(name, [
-angularMeteor, navbar.name
+angularMeteor, navbar.name, showoneReviews.name
 ])
   .component(name, {
     templateUrl: template,

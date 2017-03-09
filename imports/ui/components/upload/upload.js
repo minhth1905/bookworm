@@ -6,7 +6,12 @@ import template from './upload.html';
 class uploadCtrl{
 	constructor($scope,$state){
 		'ngInject';
-		$scope.viewModel(this);		
+		$scope.viewModel(this);
+		$('document').ready(function() {
+			$.getScript('//cdnjs.cloudflare.com/ajax/libs/summernote/0.5.1/summernote.min.js',function(){
+				$('#summernote').summernote();
+			});
+		});	
 	}
 
 	save(title,content) {

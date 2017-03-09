@@ -8,7 +8,6 @@ class navbarCtrl{
 		
 	}
 }
-
 var module = angular.module('navbarModule',[angularMeteor,sidebar.name]);
 
 const component = module.component('navbar',{
