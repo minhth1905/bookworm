@@ -29,14 +29,6 @@ const component = module.component('login',{
 	templateUrl: template,
 	controller:loginCtrl
 });
-module.config(config);
-function config($stateProvider) {
-  'ngInject';
-  $stateProvider.state('login', {
-    url: '/login',
-    template: '<login></login>',
-  });
 
-}
 
 export default component;
