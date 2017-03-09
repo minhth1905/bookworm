@@ -1,0 +1,7 @@
+<div class="container">
+	<form >
+		<input type="text" placeholder="Titlte" ng-model="$ctrl.title">
+		<div id="summernote" ng-model="$ctrl.content">Hello Summernote</div>
+		<button class="btn" ng-click="$ctrl.save($ctrl.title,$ctrl.content)">Save</button>	
+	</form>
+</div>

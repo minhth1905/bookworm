@@ -8,7 +8,7 @@ class ShowReviewsCtrl {
   constructor($stateParams, $scope) {
     'ngInject';
  
-    this.bookId = $stateParams.bookId;
+    //this.bookId = $stateParams.bookId;
     $scope.viewModel(this);
     this.helpers({
       bookId() {
