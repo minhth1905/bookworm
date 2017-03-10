@@ -1,17 +1,16 @@
 <center class="container">
-  <div class="z-depth-1 grey lighten-4 row" style="padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+  <div class="grey lighten-4">
     <form class="col s12" ng-submit="$ctrl.registerUser($ctrl.username,$ctrl.password)">
       <div class="row">
         <div class="input-field col s12 left">
-          <img src="images/logo.png" alt="" class="responsive-img circle" style="max-height:60px; vertical-align: middle">
-          <span class="center login-form-text">BookWorm Register</span>
+          <img src="images/logo.png" alt="" class="responsive-img" style="max-height:60px; vertical-align: middle">
+          <div class="center login-form-text">BookWorm</div>
+          <h5>ĐĂNG KÝ</h5>
         </div>
       </div>
-      <div class='row'>
-        <div class='col s12'>
-        </div>
+      <div class="row">
+        <p class="red">{{$ctrl.errors}}</p>
       </div>
-
       <div class='row'>
         <div class='input-field col s12 left-align'>
           <input id="icon_prefix" type="text" class="validate" ng-model="$ctrl.username">
