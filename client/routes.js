@@ -11,6 +11,7 @@ import adminCategories from '../imports/ui/components/admin/categories.js';
 import editCategories from '../imports/ui/components/admin/editCategories.js';
 import addCategory from '../imports/ui/components/admin/addCategory.js';
 import upload from '../imports/ui/components/upload/upload.js';
+import bookCases from '../imports/component/bookCases/bookCases.js'
 
 import main from './main.js';
 
@@ -20,7 +21,8 @@ var module = angular.module('bookworm-app',[angularMeteor,uiRouter,sidebar.name,
   adminCategories.name,
   editCategories.name,
   addCategory.name,
-  upload.name
+  upload.name,
+  bookCases.name
   ]);
 
 module.config(config);
@@ -71,6 +73,10 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
           $('#summernote').summernote();
         });       
       }
+    })
+    .state('bookCases', {
+      url: "/bookCases",
+      template : "<book-cases></book-cases>"
     })
 }
 
