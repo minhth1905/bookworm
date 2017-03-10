@@ -8,12 +8,6 @@
     <!--End Category name-->
     <!--Books-->
     <div class="row-fluid">
-      <div class="item-card z-depth-1">
-        <span class="book-title truncate indigo-text text-darken-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</span>
-        <i class="item-more-btn material-icons indigo-text text-darken-4">more_vert</i>
-        <div class="item-link"></div>
-        <img ng-src="http://placehold.it/300x200" alt="book-title" class="book-cover">
-      </div>
       <div class="item-card z-depth-1" ng-repeat="book in category.data_book track by $index">
         <span class="book-title truncate indigo-text text-darken-4">{{book.name}}</span>
         <i class="item-more-btn material-icons indigo-text text-darken-4">more_vert</i>

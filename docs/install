@@ -1,4 +1,2 @@
 meteor npm install --save angular angular-meteor
- meteor npm install --save angular-material
- meteor add angular:angular-material
 npm install
