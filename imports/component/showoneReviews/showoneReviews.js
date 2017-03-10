@@ -12,6 +12,7 @@ class ShowoneReviewsCtrl {
   constructor($stateParams, $scope) {
     'ngInject';
     $scope.viewModel(this);
+    $('navbar').show();
     this.helpers({
       review() {
         var review_id = $stateParams.reviewId;
@@ -56,7 +57,7 @@ function config($stateProvider) {
  
   $stateProvider.state('showoneReviews', {
     url: '/reviews/:reviewId',
-    template: '<showone-reviews></showone-reviews>'
+    template: '<showone-reviews></showone-reviews>', 
   });
 }
 

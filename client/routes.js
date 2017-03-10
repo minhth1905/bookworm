@@ -49,7 +49,6 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
       template: '<main-component></main-component>',
       controller : function(){
         Meteor.logout();
-        $state.go("home");
       }
     })
     .state('adminCategory',{
@@ -86,5 +85,8 @@ function run ($rootScope, $state) {
     if ($state.is('login') || $state.is('register')) {
       $state.go('home');
     }
+  });
+  Accounts.onLogout(function () {
+    $state.go('home');
   });
 }
