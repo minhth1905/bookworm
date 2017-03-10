@@ -37,7 +37,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
       template: '<main-component></main-component>',
     })
     .state('login', {
-      url: '/login',
+      url: '/login/:loginID',
       template: '<login></login>',
     })
     .state('register', {
@@ -49,7 +49,6 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
       template: '<main-component></main-component>',
       controller : function(){
         Meteor.logout();
-        $state.go("home");
       }
     })
     .state('adminCategory',{
@@ -78,7 +77,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
 function run ($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
     if (error === 'AUTH_REQUIRED') {
-      $state.go('login');
+      $state.go('login/1');
     }
   });
 
@@ -86,5 +85,8 @@ function run ($rootScope, $state) {
     if ($state.is('login') || $state.is('register')) {
       $state.go('home');
     }
+  });
+  Accounts.onLogout(function () {
+    $state.go('home');
   });
 }

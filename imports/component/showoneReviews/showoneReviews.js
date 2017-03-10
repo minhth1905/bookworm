@@ -12,6 +12,7 @@ class ShowoneReviewsCtrl {
   constructor($stateParams, $scope) {
     'ngInject';
     $scope.viewModel(this);
+    $('navbar').show();
     this.helpers({
       review() {
         var review_id = $stateParams.reviewId;
@@ -41,6 +42,12 @@ class ShowoneReviewsCtrl {
 			}
     })
   }
+  toat_show() {
+    // var toast = toastr.error('You are not allowed to do this!');
+    // after doing something...
+    console.log(1);
+    // toastr.refreshTimer(toast, 5000);
+  }
 }
 const name = 'showoneReviews';
 export default angular.module(name, [
@@ -56,7 +63,7 @@ function config($stateProvider) {
  
   $stateProvider.state('showoneReviews', {
     url: '/reviews/:reviewId',
-    template: '<showone-reviews></showone-reviews>'
+    template: '<showone-reviews></showone-reviews>', 
   });
 }
 

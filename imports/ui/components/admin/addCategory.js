@@ -7,6 +7,7 @@ import template from './addCategory.html';
 class addCategory{
 	constructor($scope,$state){
 		'ngInject';
+		$('navbar').show();
 		$scope.viewModel(this);		
 	}
 

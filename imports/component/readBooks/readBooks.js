@@ -9,6 +9,7 @@ import navbar from '../../ui/components/navbar/navbar.js';
 class ReadBooksCtrl {
   constructor($stateParams, $scope, $sce) {
     'ngInject';
+    $('navbar').hide();
     $scope.viewModel(this);
     this.helpers({
       review() {
@@ -46,6 +47,7 @@ class ReadBooksCtrl {
 				return false;
 			}
     })
+    console.log(1);
   }
 }
 const name = 'readBooks';
@@ -62,7 +64,15 @@ function config($stateProvider) {
  
   $stateProvider.state('readBooks', {
     url: '/readBooks/:reviewId',
-    template: '<read-books></read-books>'
+    template: '<read-books></read-books>',
+    onEnter: function() {
+      $('document').ready(function(){
+        if($('#abc') != 'undefined')
+          console.log("dug");
+          // window.location.reload(true);
+        return false;
+      })
+    }
   });
 }
 
