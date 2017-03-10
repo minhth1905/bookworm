@@ -10,6 +10,7 @@ import navbar from '../../ui/components/navbar/navbar.js';
 class ShowReviewsCtrl {
   constructor($stateParams, $scope) {
     'ngInject';
+    $('navbar').show();
  
     //this.bookId = $stateParams.bookId;
     $scope.viewModel(this);

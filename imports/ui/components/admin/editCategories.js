@@ -7,6 +7,7 @@ import template from './editCategories.html';
 class editCategories{
 	constructor($scope,$stateParams){
 		'ngInject';
+		$('navbar').show();
 		$scope.viewModel(this);
 		this.helpers({
 			categoryId() {
