@@ -20,12 +20,6 @@ class uploadCtrl{
 }
 
 var module = angular.module('upload', [angularMeteor]);
-module.run(run);
-function run($rootScope, $state) {
-	$('document').ready(function () {
-		console.log(1);
-	});
-}
 const component = module.component('upload',{
 	templateUrl: template,
 	controller:uploadCtrl

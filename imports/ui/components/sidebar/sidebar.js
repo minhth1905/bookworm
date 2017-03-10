@@ -11,6 +11,9 @@ class sidebarCtrl{
 			logined(){
 				if(Meteor.userId()) return true;
 				return false;
+			},
+			user(){
+				return Meteor.user();
 			}
 		});
 	}

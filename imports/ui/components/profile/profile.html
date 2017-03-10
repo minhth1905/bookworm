@@ -1,0 +1,53 @@
+  <center>
+    <div style="margin-top: 50px;">
+        <div ngf-drop
+        ngf-select
+        ngf-change="$ctrl.addImages($files)"
+        ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}"
+        class="drop-box"
+        ngf-multiple="false"
+        ngf-allow-dir="false"
+        ngf-accept="'image/*'"
+        ngf-drop-available="true"
+        ngf-resize="{width: 100, height: 100}">
+        <div><img id="avatar" src="{{ $ctrl.currentUser.profile.avatar}}" alt="" style="width: 50%;"></div>
+      </div>    
+  </center>
+
+
+  <form style="margin-top: 20px" ng-submit="$ctrl.changePassword($ctrl.password,$ctrl.password2,$ctrl.new_password)">
+    <div class="row">
+      <p class="red"> {{ $ctrl.errors}}</p> 
+      <p class="blue"> {{ $ctrl.success}}</p> 
+    </div>
+      <div class="row">
+      <div class="input-field col s12">
+        <input disabled value="{{$ctrl.currentUser.username}}" id="disabled" type="text" class="validate">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" ng-model="$ctrl.password" required="true">
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password2" type="password" class="validate" ng-model="$ctrl.password2" required="true">
+        <label for="password2">Re-Password</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="new-password" type="password" class="validate" ng-model="$ctrl.new_password" required="true">
+        <label for="new-password">New Password</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-block">Update</button>
+  </form>
+  
+  </div>

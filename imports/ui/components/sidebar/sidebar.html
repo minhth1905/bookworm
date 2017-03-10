@@ -4,9 +4,14 @@
             <div class="background">
                 <img src="http://materializecss.com/images/office.jpg">
             </div>
-            <a href="#user"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/736x/8c/97/01/8c97016e31d00252b3bdb23eef034401.jpg"></a>
-            <span class="white-text name">Minh Phu Nguyen
-            <span class="white-text email">phuapple.uet@gmail.com</span>
+            <div ng-if="$ctrl.logined">
+                <a href="/profile"><img class="circle" src="{{$ctrl.user.profile.avatar}}"></a>
+                <span class="white-text name">{{ $ctrl.user.username }}             
+            </div>
+             <div ng-if="!$ctrl.logined">
+                <a href="#user"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/736x/8c/97/01/8c97016e31d00252b3bdb23eef034401.jpg"></a>
+                <span class="white-text name">Guest              
+            </div>           
         </div>
     </li>
     <li><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a></li>
