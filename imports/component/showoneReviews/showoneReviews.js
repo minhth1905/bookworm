@@ -6,7 +6,7 @@ import readBooks from '../readBooks/readBooks'
 import { Reviews } from '../../api/reviews.js';
 import { Books } from '../../api/books.js';
 import template from './showoneReviews.html';
-import navbar from '../../ui/components/navbar/navbar.js';
+import login from '../../ui/components/login/login.js';
 
 class ShowoneReviewsCtrl {
   constructor($stateParams, $scope) {
@@ -44,7 +44,7 @@ class ShowoneReviewsCtrl {
 }
 const name = 'showoneReviews';
 export default angular.module(name, [
-angularMeteor, navbar.name, readBooks.name
+angularMeteor, readBooks.name, login.name
 ])
   .component(name, {
     templateUrl: template,
