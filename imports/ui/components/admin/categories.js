@@ -7,6 +7,7 @@ import template from './categories.html';
 class adminCategory{
 	constructor($scope){
 		'ngInject';
+		$('navbar').show();
 		$scope.viewModel(this);
 		this.helpers({
 			categories() {

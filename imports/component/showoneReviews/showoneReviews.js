@@ -12,6 +12,8 @@ class ShowoneReviewsCtrl {
   constructor($stateParams, $scope) {
     'ngInject';
     $scope.viewModel(this);
+    $('navbar').show();
+    this.review_id = $stateParams.reviewId;
     this.helpers({
       review() {
         var review_id = $stateParams.reviewId;
@@ -31,15 +33,77 @@ class ShowoneReviewsCtrl {
             };
           })
           data = booksList[0];
+          this.review_id = review._id;
         })
         console.log(data);
         return data;
       },
-      logined(){
+      logined() {
 				if(Meteor.userId()) return true;
 				return false;
-			}
+      },
+      bookcase() {
+        if (Meteor.userId()) {
+          var review = Reviews.findOne({ "_id": this.review_id });
+          if (review) {
+            if (Meteor.user().profile.book_cases) {
+            var user_of = Meteor.user().profile.book_cases;
+            for (var i = 0; i < user_of.length; i++) {
+              if (user_of[i] == review._id) {
+                return true;
+              }
+            }
+            return false;  
+            } else {
+              return false;
+            }
+          } 
+        }
+      }
     })
+  }
+  add(reviewID) {
+    var book_cases = []
+    if (Meteor.user().profile.book_cases) {
+      book_cases = Meteor.user().profile.book_cases;
+    } else {
+      book_cases = [];
+    }
+    var check = true;
+    for (var i = 0; i < book_cases.length; i++) {
+      if (book_cases[i] == reviewID) {
+        check = false;
+      }
+    }
+    if (check) {
+      book_cases.push(reviewID);
+    }
+    Meteor.users.update({
+      "_id": Meteor.userId()
+    },
+      {
+        $set: {
+          "profile.book_cases": book_cases
+        }
+    });
+    console.log(Meteor.user());
+  }
+  remove(reviewID) {
+    var review = Reviews.findOne({ "_id": reviewID });
+    var book_cases = Meteor.user().profile.book_cases;
+    var check = true;
+    for (var i = 0; i < book_cases.length; i++) {
+      if (book_cases[i] == reviewID)
+        book_cases.splice(i, 1);  
+    }
+     Meteor.users.update({
+      "_id": Meteor.userId()
+    },
+      {
+        $set: {
+          "profile.book_cases": book_cases
+        }
+    });
   }
 }
 const name = 'showoneReviews';
@@ -56,7 +120,7 @@ function config($stateProvider) {
  
   $stateProvider.state('showoneReviews', {
     url: '/reviews/:reviewId',
-    template: '<showone-reviews></showone-reviews>'
+    template: '<showone-reviews></showone-reviews>', 
   });
 }
 

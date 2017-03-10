@@ -5,8 +5,14 @@ import template from './login.html';
 
 class loginCtrl{
 
-	constructor($scope){
+	constructor($scope, $stateParams){
 		'ngInject';
+		var tmp = $stateParams.loginID;
+		if (tmp == '1') {
+			$('.error_login').hide();
+		} else {
+			$('.error_login').show();
+		}
 		$scope.viewModel(this);
 		this.errors = "";
 	}
