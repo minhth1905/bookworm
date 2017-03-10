@@ -37,7 +37,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
       template: '<main-component></main-component>',
     })
     .state('login', {
-      url: '/login',
+      url: '/login/:loginID',
       template: '<login></login>',
     })
     .state('register', {
@@ -77,7 +77,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
 function run ($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
     if (error === 'AUTH_REQUIRED') {
-      $state.go('login');
+      $state.go('login/1');
     }
   });
 

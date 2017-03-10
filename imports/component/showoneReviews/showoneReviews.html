@@ -4,7 +4,7 @@
     <div ng-if="$ctrl.logined" class="banner_book card">
       <i class="icon_heard fa fa-heart-o fa-2x" aria-hidden="true"></i>
     </div>
-    <div ng-if="!$ctrl.logined" class="banner_book card" ui-sref="login()">
+    <div ng-if="!$ctrl.logined" class="banner_book card" ui-sref="login({loginID: 2})">
       <i class="click icon_heard fa fa-heart-o fa-2x" aria-hidden="true"></i>
     </div>
   </div>
@@ -96,11 +96,3 @@
     -webkit-box-orient: vertical; 
   }
 </style>
-<script>
-  $('document').ready(function() {
-    $('.click').on('click', function() {
-      var $toastContent = $('<p>Bạn phải đăng nhập hoặc đăng ký để thực hiện chức năng này!<p>');
-      Materialize.toast($toastContent, 3000, 'rounded');
-    })
-  });
-</script>
