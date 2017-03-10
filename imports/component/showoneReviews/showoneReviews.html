@@ -36,7 +36,17 @@
       </div>
     </div>
   </div>
-  <div class="fixed-action-btn">
+  <div ng-if="$ctrl.logined && !$ctrl.bookcase" class="fixed-action-btn add-mine" ng-click="$ctrl.add($ctrl.review._id)">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">shopping_cart</i>
+    </a>
+  </div>
+  <div ng-if="$ctrl.logined && $ctrl.bookcase" class="fixed-action-btn remove-user" ng-click="$ctrl.remove($ctrl.review._id)">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">remove_shopping_cart</i>
+    </a>
+  </div>
+  <div ng-if="!$ctrl.logined" class="fixed-action-btn remove-mine" ui-sref="login({loginID: 2})">
     <a class="btn-floating btn-large red">
       <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
     </a>
