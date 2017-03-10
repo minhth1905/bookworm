@@ -10,7 +10,7 @@ class showallBooksCtrl
 {
    constructor($stateParams, $scope) {
     'ngInject';
- 
+    $('navbar').show();
     this.categoryId = $stateParams.categoryId;
     $scope.viewModel(this);
     this.helpers({

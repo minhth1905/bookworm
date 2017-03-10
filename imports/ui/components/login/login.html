@@ -11,6 +11,9 @@
       <div class="row">
         <p class="red">{{$ctrl.errors}}</p>
       </div>
+      <div class="row error_login" style=" display: none;">
+        <p class="red">Bạn cần đăng nhập để thực hiện chức năng này!</p>
+      </div>
       <div class='row'>
         <div class='input-field col s12 m6 l4'>
           <input id="username" type="text" class="validate grey-text text-lighten-4" ng-model="$ctrl.email" required="true">
@@ -32,3 +35,8 @@
   </center>
   <a href="/register" style="margin: auto"><strong>Bạn chưa có tài khoản? Tạo tài khoản</strong></a>
 </center>
+<script>
+  setTimeout(function() {
+    $('.error_login').hide();
+  }, 2000);
+</script>

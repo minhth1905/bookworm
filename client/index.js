@@ -49,7 +49,6 @@ function run($rootScope, $state) {
 
 function onReady() {
   angular.bootstrap(document, ['bookworm-app']);
-  $('#summernote').summernote();
   $('.button-collapse').sideNav({
     menuWidth: 250, // Default is 300
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
