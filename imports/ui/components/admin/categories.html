@@ -1,0 +1,27 @@
+<h4>All Categories Book in DB</h4>
+<div class="row">
+    <div ng-repeat="category in $ctrl.categories">
+        <div class="col s6 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{{category.cover}}">
+                
+              </div>
+              <div class="card-content">
+                <p>{{category.name}}</p>
+              </div>
+              <div class="card-action">
+                <a ui-sref="adminEditCategories({categoryId : category._id})">Edit</a>
+                <a href="#" ng-click="$ctrl.deleteCategory(category)">Delete</a>
+              </div>
+            </div>
+          </div>
+    </div>  
+
+</div>
+
+<div class="fixed-action-btn">
+ <a class="btn-floating btn-large red" ui-sref="adminAddCategories">
+   <i class="large material-icons">add</i>
+ </a>
+</div>

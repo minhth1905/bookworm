@@ -1,26 +1,35 @@
 <ul id="slide-out" class="side-nav">
-  <li>
-    <div class="userView">
-      <div class="background">
-        <img src="http://materializecss.com/images/office.jpg">
-      </div>
-      <a href="#user"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/736x/8c/97/01/8c97016e31d00252b3bdb23eef034401.jpg"></a>
-      <span class="white-text name">Minh Phu Nguyen
-      <span class="white-text email">phuapple.uet@gmail.com</span>
+    <li>
+        <div class="userView">
+            <div class="background">
+                <img src="http://materializecss.com/images/office.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/736x/8c/97/01/8c97016e31d00252b3bdb23eef034401.jpg"></a>
+            <span class="white-text name">Minh Phu Nguyen
+            <span class="white-text email">phuapple.uet@gmail.com</span>
+        </div>
+    </li>
+    <li><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a></li>
+    <div ng-if="$ctrl.logined">
+        <li><a href="#!"><i class="material-icons">library_books</i>My book</a></li>
+        <li><a href="#!"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>My Favorite</a></li>
+        <li><a href="/admin/categories"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>Categories Manage</a></li>
+        <li><a href="/upload"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>Upload</a></li>
+        <li><a href="/logout"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>Logout</a></li>
     </div>
-  </li>
-  <li><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a></li>
-  <div ng-if="$ctrl.logined">
-    <li><a href="#!"><i class="material-icons">library_books</i>My book</a></li>
-    <li><a href="#!"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>My Favorite</a></li>
-  </div>
-  <div ng-if="!$ctrl.logined">
-    <li><a href="/login"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Login</a></li>
-    <li><a href="/register"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Sign Up</a></li>
-  </div>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li><a class="subheader">Support</a></li>
-  <li><a class="waves-effect" href="#!">M2PQ</a></li>
+    </li>
+    <li><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a></li>
+    <div ng-if="$ctrl.logined">
+        <li><a href="#!"><i class="material-icons">library_books</i>My book</a></li>
+        <li><a href="#!"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>My Favorite</a></li>
+    </div>
+    <div ng-if="!$ctrl.logined">
+        <li><a href="/login"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Login</a></li>
+        <li><a href="/register"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Sign Up</a></li>
+    </div>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a class="subheader">Support</a></li>
+    <li><a class="waves-effect" href="#!">Elliptic</a></li>
 </ul>

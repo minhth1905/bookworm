@@ -33,14 +33,5 @@ const component = module.component('register',{
 	controller:registerCtrl
 });
 
-module.config(config);
-function config($stateProvider) {
-  'ngInject';
-  $stateProvider.state('register', {
-    url: '/register',
-    template: '<register></register>',
-  });
-
-}
 
 export default component;
