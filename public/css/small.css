@@ -19,7 +19,7 @@
 
 #search {
   float: left;
-  width: 60px;
+  width: 80px;
   margin-top: 7px;
   border-bottom: 0;
   font-size: large;
@@ -37,6 +37,10 @@ navbar nav {
   z-index: 1000;
   max-height: 56px;
   width: 100%
+}
+
+.nav-wrapper {
+  height: 45px;
 }
 
 .container {
@@ -68,7 +72,7 @@ navbar nav {
   position: relative;
   background-color: #ffffff;
   margin-right: 0.5rem;
-  width: calc(100% /3.2);
+  width: 30vw;
   height: 190px;
 }
 
@@ -82,10 +86,10 @@ navbar nav {
 }
 
 .book-title {
-    position: absolute;
-    max-width: calc(100% - 24px);
-    left: 2px;
-    bottom: 9px;
+  position: absolute;
+  max-width: calc(100% - 24px);
+  left: 2px;
+  bottom: 9px;
 }
 
 .item-more-btn {
