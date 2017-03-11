@@ -8,7 +8,7 @@
     <!--Category name-->
     <a ui-sref="showallBooks({ categoryId: category.id })">
       <div class="category-name indigo-text">{{category.category}}</div>
-      <span class="indigo-text caregory-more-btn">thêm</span>
+      <span class="indigo-text caregory-more-btn">THÊM</span>
     </a>
     <!--End Category name-->
     <!--Books-->
@@ -26,3 +26,16 @@
     </div>
   </div>
 </div>
+<style>
+  .row-fluid {
+    overflow: auto;
+    white-space: nowrap;
+    clear: both;
+  }
+  
+  .category-more-btn {
+    display: inline-block;
+    width: 10%;
+    margin-top: 2px !important;
+  }
+</style>

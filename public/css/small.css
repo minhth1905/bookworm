@@ -70,19 +70,7 @@ navbar nav {
 .category-name {
   display: inline-block;
   font-size: 16pt;
-  width: calc(100% - 40px);
-}
-
-.category-more-btn {
-  display: inline-block;
-  width: 10%;
-  margin-top: 2px !important;
-}
-
-.row-fluid {
-  overflow: auto;
-  white-space: nowrap;
-  clear: both;
+  width: calc(100% - 50px);
 }
 
 .item-card {
@@ -126,16 +114,16 @@ navbar nav {
 
 .indigo-gradient {
   background: rgba(63, 81, 181, .1);
-  background: -webkit-linear-gradient(rgba(63, 81, 181, 0),rgba(63, 81, 181, 0.7));
-  background: -o-linear-gradient(rgba(63, 81, 181, 0),rgba(63, 81, 181, 0.7));
-  background: -moz-linear-gradient(rgba(63, 81, 181, 0),rgba(63, 81, 181, 0.7));
-  background: linear-gradient(rgba(63, 81, 181, 0),rgba(63, 81, 181, 0.7));
+  background: -webkit-linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
+  background: -o-linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
+  background: -moz-linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
+  background: linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
 }
 
-.amber-gradient {
+.user-view-gradient {
   background: rgba(255, 193, 7, .1);
-  background: -webkit-linear-gradient(rgba(255, 193, 7, 0),rgba(255, 193, 7, 1));
-  background: -o-linear-gradient(rgba(255, 193, 7, 0),rgba(255, 193, 7, 1));
-  background: -moz-linear-gradient(rgba(255, 193, 7, 0),rgba(255, 193, 7, 1));
-  background: linear-gradient(rgba(255, 193, 7, 0),rgba(255, 193, 7, 1));
+  background: -webkit-linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
+  background: -o-linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
+  background: -moz-linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
+  background: linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
 }

@@ -14,7 +14,11 @@ class searchCtrl{
 				console.log(querry);
 				
 				var books = Books.find({name : { $regex : querry }});
+				console.log(books.count());
 				return books;			
+			},
+			params() {
+				return $stateParams.search;
 			}
 		})
 
