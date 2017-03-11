@@ -4,14 +4,19 @@
             <div class="background">
                 <img src="http://materializecss.com/images/office.jpg">
             </div>
-            <a href="#user"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/736x/8c/97/01/8c97016e31d00252b3bdb23eef034401.jpg"></a>
-            <span class="white-text name">Minh Phu Nguyen
-            <span class="white-text email">phuapple.uet@gmail.com</span>
+            <div ng-if="$ctrl.logined">
+                <a href="/profile"><img class="circle" src="{{$ctrl.user.profile.avatar}}"></a>
+                <span class="white-text name">{{ $ctrl.user.username }}             
+            </div>
+             <div ng-if="!$ctrl.logined">
+                <a href="#user"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/736x/8c/97/01/8c97016e31d00252b3bdb23eef034401.jpg"></a>
+                <span class="white-text name">Guest              
+            </div>           
         </div>
     </li>
     <li><a href="/" class="waves-effect white-text"><i class="fa fa-home fa-lg white-text" aria-hidden="true"></i>Trang chủ</a></li>
     <div ng-if="$ctrl.logined">
-        <li><a href="#!" class="waves-effect white-text"><i class="fa fa-book fa-lg white-text"></i>Kho sách</a></li>
+        <li><a href="/bookCases" class="waves-effect white-text"><i class="fa fa-book fa-lg white-text"></i>Kho sách</a></li>
         <li><a href="#!" class="waves-effect white-text"><i class="fa fa-heart fa-lg white-text" aria-hidden="true"></i>Sách yêu thích</a></li>
         <li><a href="/upload" class="waves-effect white-text" onclick="window.location.reload(true);"><i class="fa fa-pencil fa-lg white-text" aria-hidden="true"></i>Viết sách</a></li>
         <li><a href="/admin/categories" class="waves-effect white-text"><i class="fa fa-cogs fa-lg white-text"></i>Quản trị</a></li>
