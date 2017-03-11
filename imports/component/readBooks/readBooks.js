@@ -66,13 +66,13 @@ function config($stateProvider) {
     url: '/readBooks/:reviewId',
     template: '<read-books></read-books>',
     onEnter: function() {
-      $('document').ready(function(){
-        if($('#abc') != 'undefined')
-          console.log("dug");
-          // window.location.reload(true);
-        return false;
-      })
-    }
-  });
+      console.log(Date.now());
+      Session.set("start", Date.now());
+    },
+    onExit : function(){
+     var tmp = Session.get("start");
+    var timming = Date.now() - tmp;
+  }
+});
 }
 
