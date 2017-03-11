@@ -5,8 +5,9 @@ import {Categories} from '../../../api/categories.js';
 import template from './editCategories.html';
 
 class editCategories{
-	constructor($scope,$stateParams){
+	constructor($scope,$stateParams, $state, $reactive){
 		'ngInject';
+		this.$state = $state;
 		$('navbar').show();
 		$scope.viewModel(this);
 		this.helpers({
@@ -30,6 +31,7 @@ class editCategories{
 				description : description,
 			}
 		})
+		this.$state.go('adminCategory');
 	}
 }
 

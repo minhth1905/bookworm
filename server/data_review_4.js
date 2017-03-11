@@ -38,7 +38,7 @@
 //   var books_object_5 = Books.find({ "name": name_5 });
 //   books_object_5.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_5, "content": review_book_5, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_5});
 //       }
@@ -52,7 +52,7 @@
 //   var books_object_6 = Books.find({ "name": name_6 });
 //   books_object_6.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_6, "content": review_book_6, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_6});
 //       }
@@ -66,7 +66,7 @@
 //   var books_object_14 = Books.find({ "name": name_14 });
 //   books_object_14.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_14, "content": review_book_6, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_6});
 //       }
@@ -80,7 +80,7 @@
 //   var books_object_17 = Books.find({ "name": name_17 });
 //   books_object_17.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_17, "content": review_book_5, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_5});
 //       }
