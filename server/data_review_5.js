@@ -4,11 +4,11 @@
 // import { Reviews } from '../imports/api/reviews.js';
 // Meteor.startup(() => {
 //   // Reviews.remove({});
-//   var usernames = [
-//     'NguyenNhatAnh',
-//     'TrangHa',
-//     'NguyenPhongViet',
-//     'AnhKhang'
+// var usernames = [
+//    'Nguyễn Nhật Ánh',
+//     'Trang Hạ',
+//     'Nguyễn Phong Việt',
+//     'Anh Khang'
 //   ];
 //   var user_view = [
 //     123,
@@ -28,15 +28,7 @@
 //     325,
 //     346
 //   ];
-//   var user_id_1 = Meteor.users.find({ "username": usernames[1] })._id;
-//   var user_id_2 = Meteor.users.find({ "username": usernames[2] })._id;
-//   var user_id_3 = Meteor.users.find({ "username": usernames[3] })._id;
-//   var user_id_4 = Meteor.users.find({ "username": usernames[4] })._id;
-//   var users_id = [];
-//   users_id.push(user_id_1);
-//   users_id.push(user_id_2);
-//   users_id.push(user_id_3);
-//   users_id.push(user_id_4);
+//   var users_id = usernames;
 
 
 //   //book 7
