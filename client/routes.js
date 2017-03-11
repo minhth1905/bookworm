@@ -94,6 +94,10 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
       url : '/challenges',
       template: '<challenges></challenges>'
     })
+    .state('rank', {
+      url : '/rank',
+      template: '<rank></rank>'
+    })
 }
 
 function run ($rootScope, $state) {
