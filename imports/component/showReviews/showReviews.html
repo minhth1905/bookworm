@@ -1,11 +1,11 @@
 <div class="container">
   <div ng-if="$ctrl.all_review" style="margin: 45px 0px 0px 0px;" class="row">
-    <h5 class="center indigo-text ellipsis" style="margin-top: 64px; -webkit-line-clamp: 1;">Tên sách</h5>
+    <h5 class="center indigo-text ellipsis" style="margin-top: 64px; -webkit-line-clamp: 1;">{{$ctrl.book_cover.name}}</h5>
     <div class="col s12 m8 offset-m2 l5 white z-depth-1" ng-repeat="review in $ctrl.all_review" ui-sref="showoneReviews({ reviewId: review._id })"
       style="padding: 5px 10px; max-height: 30vh; margin-top: 1vh; border-radius: 1%">
-      <img ng-src="{{$ctrl.book_cover.cover}}" alt="{{review.name}}" class="user-image responsive-image circle">
+      <img ng-src="{{review.avatar}}" alt="{{review.name}}" class="user-image responsive-image circle">
       <div style="margin-left: 1%; display: inline-block; position: absolute; margin-right: 3%;">
-        <h5 class="amber-text">Tên tác giả</h5>
+        <h5 class="amber-text">{{review.user_name}}</h5>
         <div class="amber-text book-rating">
           <i class="material-icons" style="margin-right: -5px;">star</i>
           <i class="material-icons" style="margin-right: -5px;">star</i>
@@ -13,8 +13,8 @@
           <i class="material-icons" style="margin-right: -5px;">star</i>
           <i class="material-icons" style="margin-right: -5px;">star_border</i>
         </div>
-        <div class="amber-text reviews-num">123 đánh giá</div>
-        <div class="indigo-text read-num">1234 người đọc</div>
+        <div class="amber-text reviews-num">{{review.user_rate}} đánh giá</div>
+        <div class="indigo-text read-num">{{review.user_view}} lượt xem</div>
       </div>
       <span class="book-description ellipsis">{{review.description}}</span>
     </div>
