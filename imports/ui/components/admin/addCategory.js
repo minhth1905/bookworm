@@ -12,7 +12,6 @@ class addCategory{
 	}
 
 	save(name,description){
-		console.log(this.category._id);
 		Categories.insert({name : name,description : description});
 	}
 
