@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+      <div class="col s12" style="text-align: center;">
+          <p>Đánh giá của bạn</p>
+      </div>
+      <div class="col s12 amber-text book-rating" style="text-align: center;">
+          <i class="material-icons hover_star" style="margin-right: -5px">star_border</i>
+          <input type="hidden" name="" value="">
+          <i class="material-icons hover_star" style="margin-right: -5px;" >star_border</i>
+          <i class="material-icons hover_star" style="margin-right: -5px;" >star_border</i>
+          <i class="material-icons hover_star" style="margin-right: -5px;">star_border</i>
+          <i class="material-icons hover_star" style="margin-right: -5px; " >star_border</i>
+          <i class="material-icons a" style="margin-right: -5px; display: none;">star</i>
+          <i class="material-icons a" style="margin-right: -5px; display: none;">star</i>
+          <i class="material-icons a" style="margin-right: -5px; display: none;">star</i>
+          <i class="material-icons a" style="margin-right: -5px; display: none;">star</i>
+          <i class="material-icons a" style="margin-right: -5px; display: none;">star</i>
+      </div>
+  </div>
+</div>
+<script>
+  $('document').ready(function() {
+    console.log($('hover_star').text());
+    $('.hover_star').on('click', function(){
+      $('.a').show();
+      $('.hover_star').hide();
+    })
+  });
+</script>

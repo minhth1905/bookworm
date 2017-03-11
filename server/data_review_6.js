@@ -37,7 +37,7 @@
 //   var books_object_10 = Books.find({ "name": name_10 });
 //   books_object_10.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_10, "content": review_book_10, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_10});
 //       }
@@ -51,7 +51,7 @@
 //   var books_object_11 = Books.find({ "name": name_11 });
 //   books_object_11.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_11, "content": review_book_11, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_11});
 //       }

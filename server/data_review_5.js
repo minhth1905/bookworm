@@ -38,7 +38,7 @@
 //   var books_object_7 = Books.find({ "name": name_7 });
 //   books_object_7.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_7, "content": review_book_7, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_7});
 //       }
@@ -52,7 +52,7 @@
 //   var books_object_8 = Books.find({ "name": name_8 });
 //   books_object_8.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_8, "content": review_book_8, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_8});
 //       }
@@ -66,7 +66,7 @@
 //   var books_object_15 = Books.find({ "name": name_15 });
 //   books_object_15.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_15, "content": review_book_7, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_7});
 //       }
