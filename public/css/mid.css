@@ -4,10 +4,9 @@
 @media only screen and (min-width: 601px) {
   #search {
     float: left;
-    width: 80px;
     margin-top: 9px;
     border-bottom: 0;
-    font-size: x-large;
+    font-size: large;
   }
   navbar nav {
     position: fixed;
@@ -15,6 +14,9 @@
     z-index: 1000;
     max-height: 56px;
     width: 100%
+  }
+  .nav-wrapper {
+    height: 64px;
   }
   .container {
     margin-top: 64px !important;

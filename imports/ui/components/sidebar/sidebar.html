@@ -1,4 +1,4 @@
-<ul id="slide-out" class="side-nav">
+<ul id="slide-out" class="side-nav indigo">
     <li>
         <div class="userView">
             <div class="background">
@@ -9,22 +9,32 @@
             <span class="white-text email">phuapple.uet@gmail.com</span>
         </div>
     </li>
-    <li><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a></li>
+    <li><a href="/" class="waves-effect white-text"><i class="fa fa-home fa-lg white-text" aria-hidden="true"></i>Trang chủ</a></li>
     <div ng-if="$ctrl.logined">
-        <li><a href="#!"><i class="material-icons">library_books</i>My book</a></li>
-        <li><a href="#!"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>My Favorite</a></li>
-        <li><a href="/admin/categories"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>Categories Manage</a></li>
-        <li><a href="/upload" onclick="window.location.reload(true);"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>Upload</a></li>
-        <li><a href="/logout"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>Logout</a></li>
+        <li><a href="#!" class="waves-effect white-text"><i class="fa fa-book fa-lg white-text"></i>Kho sách</a></li>
+        <li><a href="#!" class="waves-effect white-text"><i class="fa fa-heart fa-lg white-text" aria-hidden="true"></i>Sách yêu thích</a></li>
+        <li><a href="/upload" class="waves-effect white-text" onclick="window.location.reload(true);"><i class="fa fa-pencil fa-lg white-text" aria-hidden="true"></i>Viết sách</a></li>
+        <li><a href="/admin/categories" class="waves-effect white-text"><i class="fa fa-cogs fa-lg white-text"></i>Quản trị</a></li>
+        <li><a href="/logout" class="waves-effect white-text"><i class="fa fa-sign-out fa-lg white-text" aria-hidden="true"></i>Đăng xuất</a></li>
     </div>
     </li>
     <div ng-if="!$ctrl.logined">
-        <li><a href="/login/1"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Login</a></li>
-        <li><a href="/register"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> Sign Up</a></li>
+        <li><a href="/login/1" class="waves-effect white-text"><i class="fa fa-sign-in fa-lg white-text" aria-hidden="true"></i>Đăng nhập</a></li>
+        <li><a href="/register" class="waves-effect white-text"><i class="fa fa-user-plus fa-lg white-text" aria-hidden="true"></i>Đăng ký</a></li>
     </div>
     <li>
-        <div class="divider"></div>
+        <div class="divider amber"></div>
     </li>
-    <li><a class="subheader">Support</a></li>
-    <li><a class="waves-effect" href="#!">Elliptic</a></li>
+    <li><a class="subheader amber-text">Hỗ trợ</a></li>
+    <li><a class="white-text" href="#!">Elliptic</a></li>
 </ul>
+<style>
+.side-nav li>a>i {
+    margin-right: 10px;
+}
+.side-nav li>a>i::after {
+    content: "|";
+    margin: 0 10px;
+    color: #ffc107;
+}
+</style>
