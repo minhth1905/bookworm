@@ -13,6 +13,7 @@ import addCategory from '../imports/ui/components/admin/addCategory.js';
 import upload from '../imports/ui/components/upload/upload.js';
 import profile from '../imports/ui/components/profile/profile.js';
 import search from '../imports/ui/components/search/search.js';
+import commentReviews from '../imports/component/commentReviews/commentReviews.js';
 import challenges from '../imports/ui/components/challenges/challenges.js';
 
 import bookCases from '../imports/component/bookCases/bookCases.js'
@@ -29,6 +30,7 @@ var module = angular.module('bookworm-app',[angularMeteor,uiRouter,sidebar.name,
   profile.name,
   bookCases.name,
   search.name,
+  commentReviews.name
   challenges.name
   ]);
 
@@ -84,6 +86,9 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
       url: "/bookCases",
       template : "<book-cases></book-cases>"
     })
+    .state('commentReviews', {
+      url: '/commentReviews/:reviewId',
+      template: '<comment-reviews></comment-reviews>'
     .state('challenges', {
       url : '/challenges',
       template: '<challenges></challenges>'

@@ -4,11 +4,11 @@
 // import { Reviews } from '../imports/api/reviews.js';
 // Meteor.startup(() => {
 //   // Reviews.remove({});
-//   var usernames = [
-//     'NguyenNhatAnh',
-//     'TrangHa',
-//     'NguyenPhongViet',
-//     'AnhKhang'
+// var usernames = [
+//    'Nguyễn Nhật Ánh',
+//     'Trang Hạ',
+//     'Nguyễn Phong Việt',
+//     'Anh Khang'
 //   ];
 //   var user_view = [
 //     123,
@@ -28,15 +28,7 @@
 //     325,
 //     346
 //   ];
-//   var user_id_1 = Meteor.users.find({ "username": usernames[1] })._id;
-//   var user_id_2 = Meteor.users.find({ "username": usernames[2] })._id;
-//   var user_id_3 = Meteor.users.find({ "username": usernames[3] })._id;
-//   var user_id_4 = Meteor.users.find({ "username": usernames[4] })._id;
-//   var users_id = [];
-//   users_id.push(user_id_1);
-//   users_id.push(user_id_2);
-//   users_id.push(user_id_3);
-//   users_id.push(user_id_4);
+//   var users_id = usernames;
 
 
 //   //book 13
@@ -46,7 +38,7 @@
 //   var books_object_13 = Books.find({ "name": name_13 });
 //   books_object_13.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_13, "content": review_book_13, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_13});
 //       }
@@ -60,7 +52,7 @@
 //   var books_object_9 = Books.find({ "name": name_9 });
 //   books_object_9.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_9, "content": review_book_9, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_9});
 //       }
@@ -76,7 +68,7 @@
 //   var books_object_16 = Books.find({ "name": name_16 });
 //   books_object_16.forEach(function (book_object) {
 //     var book_id = book_object._id;
-//     for (var pos = 0; pos < 5; pos++) {
+//     for (var pos = 0; pos < 2; pos++) {
 //     for (var i = 0; i < usernames.length; i++) {
 //       Reviews.insert({"name": name_16, "content": review_book_9, "book_id": book_id, "user_id": users_id[i], "user_view": user_view[i], "star": star[i], "user_rate": user_rate[i], "description": description_9});
 //       }

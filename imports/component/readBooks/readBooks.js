@@ -47,7 +47,6 @@ class ReadBooksCtrl {
 				return false;
 			}
     })
-    console.log(1);
   }
 }
 const name = 'readBooks';
