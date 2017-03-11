@@ -7,3 +7,6 @@ Meteor.startup(() => {
   // Reviews.remove({});
 });
 
+Meteor.AppCache.config({
+  onlineOnly: ['/modules.js']
+});

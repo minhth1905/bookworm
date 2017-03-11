@@ -6,11 +6,18 @@
       </div>
       <div class="background user-view-gradient"></div>
       <div ng-if="$ctrl.logined">
-        <a href="/profile"><img class="circle center-block" src="{{$ctrl.user.profile.avatar}}"></a>
+        <a href="/profile" ng-if="$ctrl.user.profile.avatar">
+          <img class="circle center-block" src="{{$ctrl.user.profile.avatar}}" style="object-fit: cover;">
+        </a>
+        <a href="/profile" ng-if="!$ctrl.user.profile.avatar">
+          <img class="circle center-block" src="https://smallbusiness.fedex.com/content/dam/SMB/SMAC/Wide/Shipping-Made-Easy-A.jpg"
+            style="object-fit: cover;">
+        </a>
         <div class="white-text center">{{ $ctrl.user.username }}</div>
       </div>
       <div ng-if="!$ctrl.logined" href="/login/1">
-        <img class="circle center-block" src="https://smallbusiness.fedex.com/content/dam/SMB/SMAC/Wide/Shipping-Made-Easy-A.jpg">
+        <img class="circle center-block" src="https://smallbusiness.fedex.com/content/dam/SMB/SMAC/Wide/Shipping-Made-Easy-A.jpg"
+          style="object-fit: cover;">
         <div class="white-text center">Khách</div>
       </div>
     </div>
