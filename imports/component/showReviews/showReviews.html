@@ -1,6 +1,6 @@
 <div class="container">
-  <div ng-if="$ctrl.all_review" style="margin: 45px 0px 0px 0px;" class="row">
-    <h5 class="center indigo-text ellipsis" style="margin-top: 64px; -webkit-line-clamp: 1;">{{$ctrl.book_cover.name}}</h5>
+  <div ng-if="$ctrl.all_review" style="margin: 0" class="row">
+    <h5 class="center indigo-text ellipsis" style="-webkit-line-clamp: 1;">{{$ctrl.book_cover.name}}</h5>
     <div class="col s12 m8 offset-m2 l5 white z-depth-1" ng-repeat="review in $ctrl.all_review" ui-sref="showoneReviews({ reviewId: review._id })"
       style="padding: 5px 10px; max-height: 30vh; margin-top: 1vh; border-radius: 1%">
       <img ng-src="{{review.avatar}}" alt="{{review.name}}" class="user-image responsive-image circle">

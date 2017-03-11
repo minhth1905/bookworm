@@ -2,16 +2,16 @@
   <li>
     <div class="userView">
       <div class="background">
-        <img src="http://www.eatock.com/files/book-show74.jpg" style="object-fit: cover; width: 250px;">
+        <img src="http://pop.h-cdn.co/assets/15/26/980x490/landscape-1435254275-bookshelf.jpg" style="object-fit: cover; height: 100%;">
       </div>
-      <div class="background amber-gradient"></div>
-      <div ng-if="$ctrl.logined" href="/profile">
-        <img class="circle center-block" src="{{$ctrl.user.profile.avatar}}">
+      <div class="background user-view-gradient"></div>
+      <div ng-if="$ctrl.logined">
+        <a href="/profile"><img class="circle center-block" src="{{$ctrl.user.profile.avatar}}"></a>
         <div class="white-text center">{{ $ctrl.user.username }}</div>
       </div>
       <div ng-if="!$ctrl.logined" href="/login/1">
         <img class="circle center-block" src="https://smallbusiness.fedex.com/content/dam/SMB/SMAC/Wide/Shipping-Made-Easy-A.jpg">
-        <div class="amber-text center">Khách</div>
+        <div class="white-text center">Khách</div>
       </div>
     </div>
   </li>
@@ -44,5 +44,9 @@
     content: "|";
     margin: 0 10px;
     color: #ffc107;
+  }
+  
+  .userView {
+    height: 30vh;
   }
 </style>
