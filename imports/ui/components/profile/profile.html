@@ -1,26 +1,20 @@
+<div class="container indigo white-text">
   <center>
-    <div style="margin-top: 50px;">
-        <div ngf-drop
-        ngf-select
-        ngf-change="$ctrl.addImages($files)"
-        ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}"
-        class="drop-box"
-        ngf-multiple="false"
-        ngf-allow-dir="false"
-        ngf-accept="'image/*'"
-        ngf-drop-available="true"
-        ngf-resize="{width: 100, height: 100}">
-        <div><img id="avatar" src="{{ $ctrl.currentUser.profile.avatar}}" alt="" style="width: 50%;"></div>
-      </div>    
+    <div ng-if="$ctrl.currentUser.profile.avatar">
+      <img id="avatar" src="{{ $ctrl.currentUser.profile.avatar}}" alt="" class="circle" style="width: 90px; height: 90px; object-fit: cover;">
+    </div>
+    <a ngf-drop ngf-select ngf-change="$ctrl.addImages($files)" ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}"
+      ngf-multiple="false" ngf-allow-dir="false" ngf-accept="'image/*'" ngf-drop-available="true" ngf-resize="{width: 100, height: 100}"
+      class="drop-box waves-effect btn amber indigo-text">
+      <i class="material-icons">file_upload</i>Sửa ảnh
+    </a>
   </center>
-
-
   <form style="margin-top: 20px" ng-submit="$ctrl.changePassword($ctrl.password,$ctrl.password2,$ctrl.new_password)">
     <div class="row">
-      <p class="red"> {{ $ctrl.errors}}</p> 
-      <p class="blue"> {{ $ctrl.success}}</p> 
+      <p class="pink"> {{ $ctrl.errors}}</p>
+      <p class="indigo"> {{ $ctrl.success}}</p>
     </div>
-      <div class="row">
+    <div class="row">
       <div class="input-field col s12">
         <input disabled value="{{$ctrl.currentUser.username}}" id="disabled" type="text" class="validate">
       </div>
@@ -49,5 +43,6 @@
 
     <button type="submit" class="btn btn-block" style="width: 100%">Update</button>
   </form>
-  
-  </div>
+</div>
+<style>
+</style>
