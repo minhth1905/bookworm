@@ -30,7 +30,7 @@ var module = angular.module('bookworm-app',[angularMeteor,uiRouter,sidebar.name,
   profile.name,
   bookCases.name,
   search.name,
-  commentReviews.name
+  commentReviews.name,
   challenges.name
   ]);
 
@@ -89,6 +89,7 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
     .state('commentReviews', {
       url: '/commentReviews/:reviewId',
       template: '<comment-reviews></comment-reviews>'
+    })
     .state('challenges', {
       url : '/challenges',
       template: '<challenges></challenges>'
