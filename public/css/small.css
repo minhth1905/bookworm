@@ -1,6 +1,8 @@
 
 /*Mobile style*/
-
+body {
+  overflow-x: hidden
+}
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #fff;
@@ -112,7 +114,6 @@ nav {
   margin-left: 1%;
 }
 
-
 .user-view-gradient {
   background: rgba(255, 193, 7, .1);
   background: -webkit-linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
@@ -120,3 +121,11 @@ nav {
   background: -moz-linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
   background: linear-gradient(rgba(255, 193, 7, 1), rgba(0, 0, 0, 0.2), rgba(63, 81, 181, 1));
 }
+
+  .indigo-gradient {
+    background: rgba(63, 81, 181, .1);
+    background: -webkit-linear-gradient(left,rgba(63, 81, 181, 1),rgba(0,0,0,0), rgba(63, 81, 181, 1));
+    background: -o-linear-gradient(right,rgba(63, 81, 181, 1)rgba(0,0,0,0), rgba(63, 81, 181, 1));
+    background: -moz-linear-gradient(right,rgba(63, 81, 181, 1)rgba(0,0,0,0), rgba(63, 81, 181, 1));
+    background: linear-gradient(to right,rgba(63, 81, 181, 1)rgba(0,0,0,0), rgba(63, 81, 181, 1));
+  }
