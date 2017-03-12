@@ -13,8 +13,12 @@ import addCategory from '../imports/ui/components/admin/addCategory.js';
 import upload from '../imports/ui/components/upload/upload.js';
 import profile from '../imports/ui/components/profile/profile.js';
 import search from '../imports/ui/components/search/search.js';
+import rank from '../imports/ui/components/rank/rank.js';
 import commentReviews from '../imports/component/commentReviews/commentReviews.js';
+import writeReviews from '../imports/component/writeReviews/writeReviews.js';
+import summerWrites from '../imports/component/summerWrites/summerWrites.js';
 import challenges from '../imports/ui/components/challenges/challenges.js';
+import loveBooks from '../imports/component/loveBooks/loveBooks.js';
 
 import bookCases from '../imports/component/bookCases/bookCases.js'
 
@@ -31,7 +35,11 @@ var module = angular.module('bookworm-app',[angularMeteor,uiRouter,sidebar.name,
   bookCases.name,
   search.name,
   commentReviews.name,
-  challenges.name
+  challenges.name,
+  writeReviews.name,
+  summerWrites.name,
+  rank.name,
+  loveBooks.name
   ]);
 
 module.config(config);
@@ -97,6 +105,18 @@ function config($stateProvider,$locationProvider, $urlRouterProvider,$qProvider)
     .state('rank', {
       url : '/rank',
       template: '<rank></rank>'
+    })
+    .state('writeReviews', {
+      url : '/writeReviews/:reviewId',
+      template: '<write-reviews></write-reviews>'
+    })
+    .state('summerWrites', {
+      url : '/summerWrites',
+      template: '<summer-writes></summer-writes>'
+    })
+    .state('loveBooks', {
+      url : '/loveBooks',
+      template: '<love-books></love-books>'
     })
 }
 

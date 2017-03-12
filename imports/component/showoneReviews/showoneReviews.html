@@ -64,10 +64,10 @@
         <li ng-if="$ctrl.logined && $ctrl.bookcase" ng-click="$ctrl.remove($ctrl.review._id)" class="remove-mine">
           <a class="btn-floating waves-effect waves-light white"><i class="material-icons indigo-text">remove</i></a>
         </li>
-        <li>
+        <li ng-if="$ctrl.logined && !$ctrl.love" ng-click="$ctrl.add_love($ctrl.review._id)">
           <a class="btn-floating white"><i class="fa fa-heart red-text" aria-hidden="true"></i>
         </li>
-        <li>
+        <li ng-if="$ctrl.logined && $ctrl.love" ng-click="$ctrl.remove_love($ctrl.review._id)">
           <a class="btn-floating white"><i class="fa fa-heart-o red-text" aria-hidden="true"></i>
         </li>
       </ul>
