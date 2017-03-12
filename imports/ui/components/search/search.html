@@ -2,7 +2,7 @@
   <div class="progress">
     <div class="indeterminate"></div>
   </div>
-  <div ng-if="$ctrl.books.count()>0">
+  <div ng-if="$ctrl.books">
     <div class="item-card z-depth-1" ng-repeat="book in $ctrl.books" style="margin-top: 5px;">
       <span class="book-title indigo-text truncate">{{book.name}}</span>
       <i class="item-more-btn material-icons indigo-text text-darken-4">more_vert</i>
@@ -10,7 +10,7 @@
       <img ng-src="{{book.cover}}" alt="book-title" class="book-cover">
     </div>
   </div>
-  <div class="not-found" ng-if="$ctrl.books.count()==0">
+  <div class="not-found" style="display: none">
     <h5 class="indigo-text center" style="margin-top: 40vh;">
       Không tìm thấy sách theo từ khóa "{{$ctrl.params}}"
     </h5>
