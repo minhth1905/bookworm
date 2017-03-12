@@ -40,7 +40,7 @@
   width: calc(100% - 96px);
 }
 
-navbar nav {
+nav {
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -54,7 +54,7 @@ navbar nav {
 
 .container {
   width: 96% !important;
-  margin-top: 45px;
+  margin-top: 56px;
   padding-top: 15px;
 }
 
@@ -112,13 +112,6 @@ navbar nav {
   margin-left: 1%;
 }
 
-.indigo-gradient {
-  background: rgba(63, 81, 181, .1);
-  background: -webkit-linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
-  background: -o-linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
-  background: -moz-linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
-  background: linear-gradient(rgba(63, 81, 181, 0), rgba(63, 81, 181, 0.7));
-}
 
 .user-view-gradient {
   background: rgba(255, 193, 7, .1);
